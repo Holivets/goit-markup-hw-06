@@ -49,7 +49,7 @@
             Еффективные решения <br />
             для вашего бизнеса
           </h1>
-          <a href="" class="order-button">Заказать услугу</a>
+          <button data-modal-open type="button" class="order-button">Заказать услугу</button>
         </div>
       </section>
       <section class="section border">
@@ -253,12 +253,13 @@
                 </li>
           </ul>
         </div>
-        <div>
+        <div class="subscription">
           <b class="footer-title">Подпишитесь на рассылку</b>
+          <form> <input type="email" name="email" placeholder="E-mail"><button type="submit" class="subscribe-button">Подписаться <svg class="icon" width="24" height="24"><use href="./images/sprite.svg#letter"></use></svg></button></form>
         </div>
-        <button class="subscribe-button">Подписаться</button>
       </div>
       <p class="copyright container">2020 | Developed by GoIT Students</p>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
