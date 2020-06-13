@@ -305,13 +305,39 @@ textarea:not(:placeholder-shown) + .textarea-label {
   transform: translateY(-33px);
   color: var(--accent-color);
 }
+.checkbox-form {
+  position: relative;
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .agreement {
   display: inline-flex;
-  margin-left: 9px;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--text-color);
+}
+.agreement .icon {
+  display: inline-block;
+  margin-right: 8px;
+  height: 15px;
+  width: 15px;
+  border: 2px solid var(--title-color);
+  border-radius: 4px;
+}
+.checkbox:checked + .icon {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url(../images/check.svg);
+  background-size: contain;
 }
 .agreement-link {
   text-decoration: underline;
