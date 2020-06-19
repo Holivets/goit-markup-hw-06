@@ -169,8 +169,8 @@ nav {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.section.border {
-  border-bottom: 1px solid #ececec;
+.section.no-padding {
+  padding-bottom: 0;
 }
 /* модалка */
 .backdrop {
