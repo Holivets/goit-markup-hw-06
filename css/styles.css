@@ -207,17 +207,19 @@ nav {
 }
 .close-button {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
 
   background-color: var(--secondary-title-color);
   padding: 0;
-  border: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+.close-button:hover,
+.close-button:focus {
+  fill: var(--accent-color);
 }
 .modal-title {
   display: block;
@@ -237,11 +239,16 @@ li > input {
   padding: 12px 16px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: var(--text-color);
+}
+input:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
 }
 .form-label {
   position: absolute;
@@ -257,7 +264,7 @@ li > input {
 }
 li > input:focus + .form-label,
 li > input:not(:placeholder-shown) + .form-label {
-  transform: translate(-25px, -35px);
+  transform: translate(-25px, -38px);
   color: var(--accent-color);
 }
 .input-list .icon {
@@ -282,11 +289,16 @@ textarea {
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: var(--text-color);
+}
+textarea:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
 }
 .textarea-label {
   position: absolute;
@@ -302,7 +314,7 @@ textarea {
 }
 textarea:focus + .textarea-label,
 textarea:not(:placeholder-shown) + .textarea-label {
-  transform: translateY(-33px);
+  transform: translateY(-35px);
   color: var(--accent-color);
 }
 .checkbox-form {
@@ -530,7 +542,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding-top: 48px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .logo-footer {
   color: var(--secondary-title-color);
@@ -555,9 +568,6 @@ footer {
   line-height: 1.7;
   letter-spacing: 0.03em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contacts-footer.tel {
-  margin-bottom: 28px;
 }
 .contacts-footer:hover,
 .contacts-footer:focus {
@@ -629,16 +639,6 @@ footer {
 }
 .subscribe-button .icon {
   margin-left: 10px;
-}
-.copyright {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 18px;
-  padding-bottom: 21px;
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 12px;
-  line-height: 2;
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 
 /* стилі для portfolio.html */
